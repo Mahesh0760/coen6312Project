@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated firstTry -->
+      <package
+            uri="http:///prims.ecore"
+            class="prims.PrimsPackage"
+            genModel="src/try1/firstTry.genmodel"/>
+   </extension>
+
+</plugin>
