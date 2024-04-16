@@ -14,4 +14,12 @@
             genModel="src/try1/firstTry.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emfcodeGen -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"
+            genModel="src/EMF/emfcodeGen.genmodel"/>
+   </extension>
+
 </plugin>

@@ -1,0 +1,6 @@
+import 'http://www.eclipse.org/uml2/5.0.0/UML'
+import 'sample.uml'
+
+
+context department
+

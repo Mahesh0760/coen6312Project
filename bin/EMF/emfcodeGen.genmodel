@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/coen6312Proj/src" modelPluginID="coen6312Proj"
+    modelName="EmfcodeGen" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>../../PRIMS/prims.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Prims" disposableProviderFactory="true"
+      ecorePackage="prims.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Plant">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Plant/Name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Plant/Address"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference prims.ecore#//Plant/department"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Department">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Department/Name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Department/Permission"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Person">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Person/Name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Person/Id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Person/password"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Person/getDepartment"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Manager">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Manager/generateSIRreport"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Manager/generatePOreport"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Engineer">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/searchSpareByTitle"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/searchSpareByCode"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/addSpareToSIR"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/addSpareToPR"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/inspectSpare"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/updatePR"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/searchByBOM"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/addEquipment"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/UpdateEquipment"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/UpdatePR"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Engineer/updateSIR"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Staff">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Staff/issueSpare"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Staff/updateQuantity"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Staff/addRFQtoPR"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Admin">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Admin/addPerson"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Equipment">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Equipment/Tag"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Equipment/Area"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Equipment/Type"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Equipment/createEquipment"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//BOM">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//BOM/BOMid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//BOM/DateCreated"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//BOM/attachSpare"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//BOM/createBOM"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//BOM/displayBOM"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Spare">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Spare/Code"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Spare/Title"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Spare/AvQuantity"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Spare/Location"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Spare/addQuantity"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Spare/createSpare"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Spare/returnSpare"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//SIR">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//SIR/SIRid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//SIR/DateCreated"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//SIR/DateIssued"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//SIR/SIRQuantity"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//SIR/createSIR"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//PR">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PR/PRid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PR/DateCreated"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PR/Urgency"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PR/PRQuanitity"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//PR/createPR"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//RFQ">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//RFQ/RFQid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//RFQ/DueDate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//RFQ/SupplierQuotation"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//RFQ/UnitPrice"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//RFQ/AttachQuotation"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//RFQ/getPrice"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//RFQ/createRFQ"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//RFQ/createPO"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//PO">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PO/POid"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PO/ScheduledDelivery"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//PO/ActualDelivery"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//PO/createIN"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//PO/addDeliveryDate"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//Supplier">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Supplier/Name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//Supplier/Contact"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//Supplier/addQuotations"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="prims.ecore#//InspectionNote">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//InspectionNote/InspectionId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//InspectionNote/InspectedDate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute prims.ecore#//InspectionNote/Status"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//InspectionNote/getStatusOfIN"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="prims.ecore#//InspectionNote/setStatusOfIN"/>
+    </genClasses>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
+  </genPackages>
+</genmodel:GenModel>
